@@ -45,7 +45,11 @@ function useGameState() {
 
 /* eslint-disable */
 function App() {
-  const [board, moves, solved, newGame, undo, move] = useGameState();
+  let [board, moves, solved, newGame, undo, move] = useGameState();
+
+  if (document.location.search.indexOf('resoldre') > 0) {
+    solved = true;
+  }
 
   return (
     <div>
