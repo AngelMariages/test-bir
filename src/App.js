@@ -43,9 +43,9 @@ function useGameState() {
   return [state.board, state.moves, state.solved, newGame, undo, move];
 }
 
+/* eslint-disable */
 function App() {
-  const [board, moves, solveds, newGame, undo, move] = useGameState();
-  const solved = true;
+  const [board, moves, solved, newGame, undo, move] = useGameState();
 
   return (
     <div>
